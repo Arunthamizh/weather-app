@@ -27,7 +27,7 @@ app.use(express.static(publicDirectoryPath));
 
 app.get('', (req, res) => {
     return res.render('index', {
-        title: 'Weather app',
+        title: 'eather app',
         name: 'Use this site to get your weather'
     })
 });
@@ -44,7 +44,7 @@ app.get('/help', (req, res) => {
         name: 'This the page to help you'
 
     })
-});
+}); 
 
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
