@@ -7,7 +7,7 @@ const e = require('express');
 console.log(__dirname); // /home/praveen/Documents/workspace/learn/node-course/web-server/src
 // console.log(__filename)
 const app = express()
-
+const port = process.env.PORT || 3000
 // vvv  define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewPath = path.join(__dirname, '../templates/views')
@@ -115,6 +115,6 @@ return 	res.render('404',{
     title: 'Page not found'
 })
 }); 
-app.listen(3000, () => {
-    console.log(`Server started on port 3000`);
+app.listen(port, () => {
+    console.log(`Server started on port` + port);
 });    
